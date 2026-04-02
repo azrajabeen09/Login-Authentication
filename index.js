@@ -16,10 +16,6 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const users = [];
 
-app.get("/", (req,res)=>{
-res.redirect("/register");
-});
-
 // Middleware
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
@@ -95,4 +91,6 @@ app.get("/logout", (req,res) =>{
     res.redirect("/login")
 })
 
-module.exports = app;
+app.listen(5000, ()=>{
+    console.log("Server is running on port 5000");
+}
