@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Authentication</title>
+</head>
+<body class="bg-black text-white min-h-screen p-8">
+    <a href="/logout" class="inline-block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition fixed top-4 right-4">Logout</a>
+    
+    <h1 class="text-3xl font-bold mb-8 text-center"> ____ My Projects ____</h1>
+    <p  class="text-xl text-center">Choose a project to view</p>
+    <div class="grid grid-cols-2 md:grid-cols-2 gap-6 h-80 w-160 ml-100 mt-20">
+        <% projects.forEach(projects => { %>
+            <div class="bg-gray-900 p-6 rounded-2xl shadow-lg hover:shadow-blue-500/20 transition">
+                <h2 class="text-xl font-semibold mb-4">
+                    <%= projects.name %>
+                </h2>
+                <a href="<%= projects.link %>" target="_blank"
+                   class="inline-block bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition">
+                   View Project
+                </a>
+            </div>
+        <% }) %>
+    </div>
+
+</body>
+</html>
