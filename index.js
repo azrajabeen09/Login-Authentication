@@ -16,6 +16,10 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const users = [];
 
+app.get("/", (req,res)=>{
+res.send("Running backend");
+});
+
 // Middleware
 const authMiddleware = (req, res, next) => {
     const token = req.cookies.token;
@@ -32,6 +36,7 @@ const authMiddleware = (req, res, next) => {
         return res.redirect("/login");
     }
 };
+
 app.get("/project", authMiddleware, (req, res) => {
     const projects = [
     {name: "Calculator",   link: "https://calculator-orpin-beta.vercel.app/"},
