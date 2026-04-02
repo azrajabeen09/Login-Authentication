@@ -35,7 +35,7 @@ const authMiddleware = (req, res, next) => {
 app.get("/project", authMiddleware, (req, res) => {
     const projects = [
     {name: "Calculator",   link: "https://calculator-orpin-beta.vercel.app/"},
-    {name: "Tribute Page", link: "" },
+    {name: "Tribute Page", link: "https://tribute-page-ten-coral.vercel.app/" },
     {name: "Todo App",    link: ""},
     {name: "Login Authentication",link: ""}
 ];
