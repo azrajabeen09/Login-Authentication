@@ -17,7 +17,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 const users = [];
 
 app.get("/", (req,res)=>{
-res.send("Running backend");
+res.redirect("/register");
 });
 
 // Middleware
