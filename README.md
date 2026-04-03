@@ -3,7 +3,7 @@
 A simple and secure authentication system built using Node.js, Express.js and EJS.
 This project demonstrate user signup, login, password hashing and protected routes using JWT.
 
-Features:
+🚀Features:
 
 . User signup with secure password hashing
 
@@ -17,7 +17,8 @@ Features:
 
 . Logout functionality using cookies
 
-Tech Stack:
+📍Tech Stack:
+
 . Node.js
 
 . Express.js
